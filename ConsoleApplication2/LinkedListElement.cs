@@ -23,7 +23,7 @@ namespace ConsoleApplication2
 
         public LinkedListNode(T data, LinkedListNode<T> newnext) : this (data)
         {
-            next = newnext;
+                next = newnext;
         }
     }
     public class MyLinkedList <T>
@@ -32,30 +32,61 @@ namespace ConsoleApplication2
         
         
         private LinkedListNode<T> head=null;
-        private LinkedListNode<T> tale=null;
         private bool isempty = true;
 
         public bool AddNewNode(T NewElement)
         {
-
-            LinkedListNode <T> temp = new LinkedListNode<T>(NewElement, head);
-            head = temp;
+            LinkedListNode<T> temp;
+            if (IsEmpty)
+            {
+                head = new LinkedListNode<T>(NewElement);
+            }
+            else
+            {
+                temp = new LinkedListNode<T>(NewElement, head);
+                head = temp;
+            }
+            isempty = false;
+            Console.WriteLine("---LinkedList message: Element added to the list...");
             return true;
         }
-        public bool RemoveHeadNode()
+        public void RemoveHeadNode()
         {
-            head = head.next;
-            return false;
+            if (isempty)
+            {
+                Console.WriteLine("---LinkedList message: No more elements contained in linked list...");
+            }
+            else
+            {
+                Console.WriteLine("---LinkedList message: Element removed from list...");
+                if (head.next == null)
+                {
+                    head.value = default(T);
+                    isempty = true;
+                }
+                else
+                {
+                    head = head.next;
+                }
+            }
         }
 
         public T GetHeadValue()
         {
-            return head.value;
+            if (isempty)
+            {
+                return default(T);
+            }
+                return head.value;
+        
         }
        
-        public bool IsEmpty()
+        public bool IsEmpty
         {
-            return head.next == null;
+            get
+            {
+                return isempty;
+            }
         }
 
     }

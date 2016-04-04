@@ -22,7 +22,67 @@ namespace ConsoleApplication2
             Console.WriteLine(ms.Pop());
             Console.WriteLine(ms.Pop());
             Console.WriteLine(ms.Pop());
-            Console.WriteLine();
+            ms.Push(28);
+            Console.WriteLine(ms.Peek());
+            Console.WriteLine(ms.Peek());
+            Console.WriteLine(ms.Peek());
+            Console.WriteLine(ms.Pop());
+            Console.WriteLine(ms.Pop());
+            Console.WriteLine(ms.Pop());
+            Console.WriteLine(ms.Pop());
+            ms.Push(4);
+            ms.Push(5);
+            ms.Push(56);
+            ms.Push(28); ms.Push(4);
+            ms.Push(5);
+            ms.Push(56);
+            ms.Push(28); ms.Push(4);
+            ms.Push(5);
+            ms.Push(56);
+            ms.Push(28); ms.Push(4);
+            ms.Push(5);
+            ms.Push(56);
+            ms.Push(28);
+            Console.WriteLine(ms.Pop());
+            Console.WriteLine(ms.Pop());
+            Console.WriteLine(ms.Pop());
+            Console.WriteLine(ms.Pop());
+            Console.WriteLine(ms.Pop());
+            Console.WriteLine(ms.Pop());
+            Console.WriteLine(ms.Pop());
+            Console.WriteLine(ms.Pop());
+            ms.Push(5);
+            ms.Push(56);
+            Console.WriteLine(ms.Pop());
+            Console.WriteLine(ms.Pop());
+            Console.WriteLine(ms.Pop());
+            Console.WriteLine(ms.Pop());
+            Console.WriteLine(ms.Pop());
+            Console.WriteLine(ms.Pop());
+            Console.WriteLine(ms.Pop());
+            Console.WriteLine(ms.Pop());
+            Console.WriteLine(ms.Pop());
+            Console.WriteLine(ms.Pop());
+            Console.WriteLine(ms.Pop());
+            Console.WriteLine(ms.Pop());
+            Console.WriteLine(ms.Pop());
+            Console.WriteLine(ms.Pop());
+            Console.WriteLine(ms.Pop());
+            Console.WriteLine(ms.Pop());
+            Console.WriteLine(ms.Pop());
+            Console.WriteLine(ms.Pop());
+            Console.WriteLine(ms.Pop());
+            Console.WriteLine(ms.Pop());
+            Console.WriteLine(ms.Pop());
+            Console.WriteLine(ms.Pop());
+            Console.WriteLine(ms.Pop());
+            Console.WriteLine(ms.Pop());
+            Console.WriteLine(ms.Pop());
+            Console.WriteLine(ms.Pop());
+            Console.WriteLine(ms.Pop());
+            Console.ReadLine();
+
+            
         }
     }
 }

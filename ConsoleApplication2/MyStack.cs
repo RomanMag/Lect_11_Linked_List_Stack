@@ -6,32 +6,40 @@ using System.Threading.Tasks;
 
 namespace ConsoleApplication2
 {
-    public class MyStack<T>
+    public class MyStack<T> where T : IComparable
     {
         private MyLinkedList<T> mystack = new MyLinkedList<T>();
 
         public T Peek()
         {
-            if (mystack.GetHeadValue() != null)
-            { return mystack.GetHeadValue(); }
-            return default(T);
+            return mystack.GetHeadValue();
         }
 
         public T Pop()
         {
             T temp = default(T);
-            if (mystack.GetHeadValue() != null)
+            if (IsEmpty())
             {
+                Console.WriteLine("--pop is not possible, stack is empty, return default value");
+            }
+            else
+            {
+                Console.WriteLine("--perform pop on stack");                
                 temp = mystack.GetHeadValue();
                 mystack.RemoveHeadNode();
             }
-
+            
             return temp;
         }
         public void Push(T newelement)
         {
+            Console.WriteLine("--perform push to stack");
             mystack.AddNewNode(newelement);
         }
-
+        
+        public bool IsEmpty()
+        {
+            return mystack.IsEmpty;
+        }
     }
 }
